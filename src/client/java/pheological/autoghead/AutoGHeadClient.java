@@ -68,7 +68,7 @@ public class AutoGHeadClient implements ClientModInitializer {
 
 				client.interactionManager.interactItem(player, Hand.MAIN_HAND); // Interacts w/ the item, in this case by right clicking it
 				usedGoldenHead = true; //shitcode
-				cooldownTicks = 20; // Makes it so the ghead won't be used again for another second; stops double uses
+				cooldownTicks = 100; // Makes it so the ghead won't be used again for another few seconds; stops double uses
 
 
 				switchBackDelayTicks = 5; // Needs to be reset after its eaten
@@ -103,11 +103,11 @@ public class AutoGHeadClient implements ClientModInitializer {
 	}
 
 
-	private int setHealthThreshold(CommandContext<FabricClientCommandSource> context) { //Command to set health threshold before eating the ghead
+	private int setHealthThreshold(CommandContext<FabricClientCommandSource> context) { //Method for command to set health threshold
 		int newThreshold = IntegerArgumentType.getInteger(context, "value");
 		healthThreshold = newThreshold;
 		if (client.player != null) {
-			client.player.sendMessage(Text.literal("Golden Head health threshold set to " + newThreshold + "."), false);
+			client.player.sendMessage(Text.literal("Golden Head health threshold set to " + newThreshold + ".").styled(style -> style.withColor(Formatting.YELLOW)), false);
 		}
 		return 1;
 	}
