@@ -89,7 +89,7 @@ public class AutoGHeadClient implements ClientModInitializer {
 
 	private int toggleAutoGoldenHead(CommandContext<FabricClientCommandSource> context) { //Method linked to toggle the mod
 		autoGoldenHeadEnabled = !autoGoldenHeadEnabled;
-		String status = autoGoldenHeadEnabled ? "enabled" : "disabled";
+
 
 
 		Text message = autoGoldenHeadEnabled //yeahhh more shitcode; skidded straight from google; literally only for formatting it green & red
