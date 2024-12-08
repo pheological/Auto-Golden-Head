@@ -19,10 +19,10 @@ Toggles the Auto Golden Head mod on or off.
 
 ### `/AutoGoldenHead health <integer>`
 
-Sets the health threshold at which the Golden Head is used. The default threshold is set to 3 (3 hearts).
+Sets the health threshold at which the Golden Head is used. The default threshold is set to 3 (1.5 hearts).
 
 - **Usage**: `/AutoGoldenHead health <value>`
 - **Valid Range**: From 1 to 20 (1 = 0.5 hearts, 20 = 10 hearts).
-- **Example**: `/AutoGoldenHead health 5` sets the threshold to 5 hearts.
+- **Example**: `/AutoGoldenHead health 5` sets the threshold to 2.5 hearts.
 - **Response**: Sends a message confirming the new health threshold.
 
