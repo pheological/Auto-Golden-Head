@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "auto-g-head",
+	"version": "${version}",
+	"name": "Auto Golden Head",
+	"description": "Eat golden heads automatically when under a certain health threshold",
+	"authors": [
+		"Pheological"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/auto-g-head/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"pheological.autoghead.AutoGHead"
+		],
+		"client": [
+			"pheological.autoghead.AutoGHeadClient"
+		]
+	},
+	"mixins": [
+		"auto-g-head.mixins.json",
+		{
+			"config": "auto-g-head.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.9",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
