@@ -1,6 +1,6 @@
 # Auto Golden Head Mod
 
-Eats a Golden Head whenever your health is under a threshold specified by the user
+Eats a Golden Head whenever your health is under a threshold specified by the user /n
 **NOTE**: **This mod may be blacklisted on some servers, PLEASE check server rules to avoid being banned. It was not made for the intent of cheating on servers.
 ## Features
 
