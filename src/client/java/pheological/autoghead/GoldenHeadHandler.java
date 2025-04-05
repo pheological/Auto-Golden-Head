@@ -9,8 +9,8 @@ public class GoldenHeadHandler {
     private static final MinecraftClient client = MinecraftClient.getInstance();
     private boolean autoGoldenHeadEnabled = true; // Mod's toggle
     private boolean usedGoldenHead = false;
-    private int cooldownTicks = 0;
-    private int switchBackDelayTicks = 0;
+    private int cooldownTicks = 60;
+    private int switchBackDelayTicks = 5;
     private int previousSlot = -1;
     private int healthThreshold = 3;
 
@@ -45,7 +45,7 @@ public class GoldenHeadHandler {
                 assert client.interactionManager != null;
                 client.interactionManager.interactItem(player, Hand.MAIN_HAND);
                 usedGoldenHead = true;
-                cooldownTicks = 20;
+                cooldownTicks = 60;
                 switchBackDelayTicks = 5;
             }
         }
